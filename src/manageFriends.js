@@ -1,4 +1,3 @@
-state = {friends:[]}
 export function manageFriends(state, action) {
   // your code here
   switch (action.type) {
@@ -6,7 +5,7 @@ export function manageFriends(state, action) {
       return {friends:[...state.friends,action.payload]}
       break;
     case "friends/remove":
-      return {friends:[state.friends.filter(friend =>friend.id !== action.payload)]}
+      return {friends:state.friends.filter(friend =>friend.id !== action.payload)}
     default:
       return state
       break;
